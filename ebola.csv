@@ -1,0 +1,13 @@
+# Ebola
+setwd("~/Documents/Data Science/R Datasets")
+
+mydata <- read.csv("ebola.csv")   # read the data into a dataframe
+
+confirmed <- subset(mydata, Indicator == "Cumulative number of confirmed Ebola cases" &
+                    Date == "2015-11-17")
+
+deaths <- subset(mydata, Indicator == "Cumulative number of confirmed Ebola deaths" &
+                   Date == "2015-11-17")
+
+summary(confirmed)
+summary(deaths)
